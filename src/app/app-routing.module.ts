@@ -8,11 +8,11 @@ import { PageNotFoundComponent } from './assistant/page-not-found/page-not-found
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'greeting',
+    redirectTo: 'splash',
     pathMatch: 'full'
   },
   {
-    path: 'greeting',
+    path: 'splash',
     component: SplashComponent
   },
   {

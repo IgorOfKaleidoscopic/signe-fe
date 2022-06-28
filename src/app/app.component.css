@@ -1,3 +1,43 @@
-.example-spacer { /* EXPERIMENT */
+.toolbar {
+  background-color:lightgrey;
+}
+
+.toolbar-text {
+  font-weight: 400;
+  padding-left: 1%;
+}
+
+.toolbar-text-application-name {
+  font-family: "Montserrat Black";
+  font-size: 30px;
+}
+
+.toolbar-text-powered-by {
+  font-weight:600;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.toolbar-text-app-purpose {
+  font-weight:600;
+  font-size: 12px;
+}
+
+.toolbar-spacer {
   flex: 1 1 auto;
 }
+
+.toolbar-button {
+  border: 0px;
+  padding-left:5px;
+  margin:5px;
+  font-size:15px;
+  font-weight:bold;
+  background-color:lightgrey;
+  color:darkslategrey;
+}
+
+.toolbar-button:hover {
+  color:white;
+}
+

@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-greeting',
+  selector: 'app-splash',
   templateUrl: './splash.component.html',
   styleUrls: ['./splash.component.css']
 })
 export class SplashComponent implements OnInit {
-  announcement:string = 'my first Angular application signe-fe';
 
   constructor() { }
 
