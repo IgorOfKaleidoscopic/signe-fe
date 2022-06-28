@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { UserListComponent } from './user/user-list/user-list.component';
-import { GreetingComponent } from './assistant/greeting/greeting.component';
+import { SplashComponent } from './assistant/splash/splash.component';
 import { PageNotFoundComponent } from './assistant/page-not-found/page-not-found.component';
 
 const routes: Routes = [
@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: 'greeting',
-    component: GreetingComponent
+    component: SplashComponent
   },
   {
     path: 'userlist',
