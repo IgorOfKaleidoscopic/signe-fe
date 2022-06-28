@@ -12,10 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatDialogModule } from '@angular/material/dialog';
-
-import { MatToolbarModule } from '@angular/material/toolbar';/* EXPERIMENT */
-import { MatIconModule } from '@angular/material/icon';/* EXPERIMENT */
-import { MatSelectModule } from '@angular/material/select';/* EXPERIMENT */
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -26,9 +24,8 @@ import { MatSelectModule } from '@angular/material/select';/* EXPERIMENT */
     HttpClientModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    MatToolbarModule,/* EXPERIMENT */
-    MatIconModule,/* EXPERIMENT */
-    MatSelectModule,/* EXPERIMENT */
+    MatToolbarModule,
+    MatIconModule,
     AppRoutingModule,
     UserModule,
     AssistantModule

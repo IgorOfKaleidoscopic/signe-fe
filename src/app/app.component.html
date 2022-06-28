@@ -1,4 +1,4 @@
-<div>
+<div class="content">
   <p style="margin:0px;">
     <mat-toolbar class="toolbar">
       <mat-icon class="material-icons-round">waving_hand</mat-icon>
@@ -9,11 +9,17 @@
         A SIMPLE GITHUB BROWSER
       </span>
       <span class="toolbar-spacer"></span>
-      <button class="toolbar-button" mat-button>
+      <button class="toolbar-button" mat-button routerLink="splash">
         HOME
       </button>
-      <button class="toolbar-button" mat-button>
+      <button class="toolbar-button" mat-button routerLink="userlist">
         USERS
+      </button>
+      <button class="toolbar-button" mat-button routerLink="nonexistentpage">
+        404
+      </button>
+      <button class="toolbar-button" mat-button routerLink="splash">
+        SIGN IN
       </button>
     </mat-toolbar>
   </p>
