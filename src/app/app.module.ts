@@ -5,11 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { UserModule } from './user/user.module'
-import { UserListComponent } from './user/user-list/user-list.component'
 
 import { AssistantModule } from './assistant/assistant.module';
-import { GreetingComponent } from './assistant/greeting/greeting.component';
-import { PageNotFoundComponent } from './assistant/page-not-found/page-not-found.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -26,15 +23,15 @@ import { MatSelectModule } from '@angular/material/select';/* EXPERIMENT */
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
-    UserModule,
-    AssistantModule,
     BrowserAnimationsModule,
     MatDialogModule,
     MatToolbarModule,/* EXPERIMENT */
     MatIconModule,/* EXPERIMENT */
-    MatSelectModule/* EXPERIMENT */
+    MatSelectModule,/* EXPERIMENT */
+    AppRoutingModule,
+    UserModule,
+    AssistantModule
   ],
   providers: [],
   bootstrap: [AppComponent]
