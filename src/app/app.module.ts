@@ -12,6 +12,13 @@ import { GreetingComponent } from './assistant/greeting/greeting.component';
 import { PageNotFoundComponent } from './assistant/page-not-found/page-not-found.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatDialogModule } from '@angular/material/dialog';
+
+import { MatToolbarModule } from '@angular/material/toolbar';/* EXPERIMENT */
+import { MatIconModule } from '@angular/material/icon';/* EXPERIMENT */
+import { MatSelectModule } from '@angular/material/select';/* EXPERIMENT */
 
 @NgModule({
   declarations: [
@@ -22,7 +29,12 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule,
     UserModule,
-    AssistantModule
+    AssistantModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatToolbarModule,/* EXPERIMENT */
+    MatIconModule,/* EXPERIMENT */
+    MatSelectModule/* EXPERIMENT */
   ],
   providers: [],
   bootstrap: [AppComponent]
