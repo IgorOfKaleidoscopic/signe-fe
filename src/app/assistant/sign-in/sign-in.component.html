@@ -1,12 +1,13 @@
-<div>
+<div mat-dialog-content>
   <p>
     Please provide a GitHub Personal Access Token
   </p>
-</div>
-<div mat-dialog-content>
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="fill" class="form">
     <mat-label>Token</mat-label>
-    <input matInput [(ngModel)]="data.pat">
+    <input matInput [(ngModel)]="data.pat" class="token">
+    <button *ngIf="data.pat" matSuffix mat-icon-button aria-label="Clear" (click)="data.pat=''">
+      <mat-icon>close</mat-icon>
+    </button>
   </mat-form-field>
 </div>
 <div mat-dialog-actions>

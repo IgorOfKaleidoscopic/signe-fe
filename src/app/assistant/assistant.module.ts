@@ -12,14 +12,14 @@ import { GitHubGatewayService } from '../git-hub-gateway.service';
 
 import { SplashComponent } from './splash/splash.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { DialogComponent } from './dialog/dialog.component';
+import { InfoComponent } from './info/info.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
     SplashComponent,
     PageNotFoundComponent,
-    DialogComponent,
+    InfoComponent,
     SignInComponent
   ],
   imports: [
