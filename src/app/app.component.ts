@@ -24,6 +24,7 @@ export class AppComponent {
   openSignInDialog(): void{
     const dialogHandle = this.dialog.open(SignInComponent, {
       data: {name: this.globals.getPAT()},
+      width: '600px'
     });
 
     dialogHandle.afterClosed().subscribe(result => {

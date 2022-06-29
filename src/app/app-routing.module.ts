@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { UserListComponent } from './user/user-list/user-list.component';
+import { RepositoriesComponent } from './user/repositories/repositories.component';
 import { SplashComponent } from './assistant/splash/splash.component';
 import { PageNotFoundComponent } from './assistant/page-not-found/page-not-found.component';
 
@@ -16,8 +16,8 @@ const routes: Routes = [
     component: SplashComponent
   },
   {
-    path: 'userlist',
-    component: UserListComponent
+    path: 'repositories',
+    component: RepositoriesComponent
   },
   {
     path: '**',

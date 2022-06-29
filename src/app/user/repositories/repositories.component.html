@@ -1,0 +1,12 @@
+<article style='display: grid'>
+  <h1>Github users!</h1>
+  <div style='display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; column-gap: 1rem;' *ngIf="repositories">
+    <div *ngFor="let repository of repositories | async">
+      <a href="/repository/{{repository.login}}" >{{ repository.login }} </a>
+      <div >
+        <img style="height: 80px" src={{repository.avatar_url}} alt="avatar">
+      </div>
+    </div>
+  </div>
+</article>
+
