@@ -1,0 +1,14 @@
+<div>
+  <p>
+    Please provide a GitHub Personal Access Token
+  </p>
+</div>
+<div mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Token</mat-label>
+    <input matInput [(ngModel)]="data.pat">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]=data.pat cdkFocusInitial>Ok</button>
+</div>

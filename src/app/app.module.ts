@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { UserModule } from './user/user.module'
-
 import { AssistantModule } from './assistant/assistant.module';
-
-import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
+import { GlobalsService } from './globals.service';
+import { GitHubGatewayService } from './git-hub-gateway.service';
 
 @NgModule({
   declarations: [
@@ -21,16 +23,20 @@ import { MatIconModule } from '@angular/material/icon';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
     BrowserAnimationsModule,
-    MatDialogModule,
     MatToolbarModule,
+    MatDialogModule,
+    MatFormFieldModule,
     MatIconModule,
+    MatInputModule,
     AppRoutingModule,
     UserModule,
     AssistantModule
   ],
-  providers: [],
+  providers: [
+    GlobalsService,
+    GitHubGatewayService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
