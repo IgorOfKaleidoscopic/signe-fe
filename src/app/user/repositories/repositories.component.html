@@ -1,27 +1,37 @@
-<div *ngIf="repositories" class="splash">
+<div class="splash">
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Select sorting order</mat-label>
+      <mat-select [(value)]="sortOrderOption">
+        <mat-option value="Repo">Repo</mat-option>
+        <mat-option value="Owner">Owner</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Select owner type</mat-label>
+      <mat-select [(value)]="ownerTypeOption">
+        <mat-option value="User">User</mat-option>
+        <mat-option value="Organization">Organization</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
   <h1>Github public repositories</h1>
   <table>
     <tr>
-      <td>Name</td>
-      <td>Owner</td>
-      <td>Avatar</td>
+      <td>Repository name</td>
       <td>Description</td>
+      <td>Owner name</td>
+      <td>Owner avatar</td>
     </tr>
     <tr *ngFor="let repository of repositories | async">
-      <td><a href="{{ repository.html_url }}">{{ repository.name }}</a></td>
-      <td><a href="{{ repository.owner.url }}">{{ repository.owner.login }}</a></td>
-      <td><img src="{{ repository.owner.avatar_url }}"/></td>
-      <td>{{ repository.description }}</td>
+      <td *ngIf="repository.owner.type == ownerTypeOption"><a href="{{ repository.html_url }}">{{ repository.name }}</a></td>
+      <td *ngIf="repository.owner.type == ownerTypeOption">{{ repository.description }}</td>
+      <td *ngIf="repository.owner.type == ownerTypeOption">{{ ownerTypeOption }} <a href="{{ repository.owner.url }}">{{ repository.owner.login }}</a></td>
+      <td *ngIf="repository.owner.type == ownerTypeOption"><img src="{{ repository.owner.avatar_url }}" class="foto"/></td>
     </tr>
   </table>
-
-  <div *ngFor="let repository of repositories | async">
-    <table>
-
-
-    </table>
-    {{repository.name}} <a href="{{repository.url}}" class="repo">{{ repository.description }}</a>
-    <br>
-  </div>
 </div>
 

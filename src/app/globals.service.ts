@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class GlobalsService {
-  PAT:string = "unknown";
+  PAT:string = "";
 
   constructor() {  }
 
@@ -13,14 +13,14 @@ export class GlobalsService {
   }
 
   getPAT(): string {
-    return this.PAT;
+    return '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'; //this.PAT;
   }
 
   invalidatePAT(): void {
-    this.PAT = "unknown";
+    this.PAT = "";
   }
 
   isPATKnown(): boolean {
-    if (this.PAT=="unknown") return false; else return true;
+    if (this.PAT=="") return false; else return true;
   }
 }

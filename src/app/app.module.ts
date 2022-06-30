@@ -16,6 +16,7 @@ import { MatInputModule } from '@angular/material/input';
 
 import { GlobalsService } from './globals.service';
 import { GitHubGatewayService } from './git-hub-gateway.service';
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { GitHubGatewayService } from './git-hub-gateway.service';
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
+    MatBadgeModule,
     AppRoutingModule,
     UserModule,
     AssistantModule

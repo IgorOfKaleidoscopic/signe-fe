@@ -15,10 +15,12 @@ import { GlobalsService } from './globals.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  applicationName:string;
+  applicationName: string;
+  loginAction: string;
 
   constructor(private router: Router, public globals: GlobalsService, public dialog: MatDialog) {
     this.applicationName = 'S I G N E';
+    this.loginAction = 'LOG IN';
   }
 
   openSignInDialog(): void{
@@ -28,6 +30,9 @@ export class AppComponent {
 
     dialogHandle.afterClosed().subscribe(result => {
       this.globals.setPAT(result);
+
+      if(this.globals.isPATKnown()) this.loginAction = 'LOG OFF'; else this.loginAction = 'LOG IN';
     });
+
   }
 }
