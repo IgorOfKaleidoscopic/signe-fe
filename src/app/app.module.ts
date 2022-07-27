@@ -31,6 +31,9 @@ import { GitHubGatewayService } from './git-hub-gateway.service';
     GlobalsService,
     GitHubGatewayService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent,
+    GlobalsService
+  ]
 })
 export class AppModule { }

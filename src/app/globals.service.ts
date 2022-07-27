@@ -13,7 +13,7 @@ export class GlobalsService {
   }
 
   getPAT(): string {
-    return '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'; //this.PAT;
+    return this.PAT;
   }
 
   invalidatePAT(): void {
