@@ -3,20 +3,17 @@ import { CommonModule } from '@angular/common';
 
 import { HttpClientModule } from '@angular/common/http';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-
-import { RepositoriesComponent } from './repositories/repositories.component';
-import { OrderByPipeComponent } from '../assistant/orderby-pipe/orderby-pipe.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
-    RepositoriesComponent,
-    OrderByPipeComponent
   ],
   imports: [
     CommonModule,
@@ -24,9 +21,15 @@ import { OrderByPipeComponent } from '../assistant/orderby-pipe/orderby-pipe.com
     FormsModule,
     MatDialogModule,
     MatFormFieldModule,
+    BrowserAnimationsModule,
     MatIconModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTableModule,
+    MatProgressSpinnerModule,
+    MatPaginatorModule
+  ],
+  exports: [
   ]
 })
 export class UserModule { }

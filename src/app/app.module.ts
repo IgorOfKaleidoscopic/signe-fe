@@ -13,6 +13,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { GlobalsService } from './globals.service';
 import { GitHubGatewayService } from './git-hub-gateway.service';
@@ -31,9 +33,12 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatIconModule,
     MatInputModule,
     MatBadgeModule,
+    MatProgressSpinnerModule,
+    MatPaginatorModule,
     AppRoutingModule,
-    UserModule,
     AssistantModule
+  ],
+  exports: [
   ],
   providers: [
     GlobalsService,
