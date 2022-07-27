@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { UserModule } from './user/user.module'
+import { UserModule } from './users/users.module'
 import { AssistantModule } from './assistant/assistant.module';
 
 import { BrowserModule } from '@angular/platform-browser';
