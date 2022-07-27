@@ -1,14 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatIconModule } from '@angular/material/icon';
-import { FormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
+import { AngularMaterialModule } from '../angular-material/angular-material.module';
 
-import { GlobalsService } from '../globals.service'
-import { GitHubGatewayService } from '../git-hub-gateway.service';
+import { FormsModule } from '@angular/forms';
 
 import { SplashComponent } from './splash/splash.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -24,15 +19,16 @@ import { SignInComponent } from './sign-in/sign-in.component';
   ],
   imports: [
     CommonModule,
-    FormsModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatInputModule
-    ],
-    providers: [
-      GlobalsService,
-      GitHubGatewayService
-    ]
-  })
+    AngularMaterialModule,
+    FormsModule
+  ],
+  exports: [
+    SplashComponent,
+    PageNotFoundComponent,
+    InfoComponent,
+    SignInComponent
+  ],
+  providers: [
+  ]
+})
 export class AssistantModule { }
