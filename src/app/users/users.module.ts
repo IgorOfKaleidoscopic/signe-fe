@@ -13,4 +13,4 @@ import { AngularMaterialModule } from '../angular-material/angular-material.modu
   exports: [
   ]
 })
-export class UserModule { }
+export class UsersModule { }

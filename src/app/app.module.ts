@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { UserModule } from './users/users.module'
-import { AssistantModule } from './assistant/assistant.module';
+import { UsersModule } from './users/users.module'
+import { AccessoriesModule } from './accessories/accessories.module';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -22,8 +22,8 @@ import { GitHubGatewayService } from './git-hub-gateway.service';
     BrowserAnimationsModule,
     AngularMaterialModule,
     AppRoutingModule,
-    AssistantModule,
-    UserModule
+    AccessoriesModule,
+    UsersModule
   ],
   exports: [
   ],
