@@ -31,4 +31,4 @@ import { SignInComponent } from './sign-in/sign-in.component';
   providers: [
   ]
 })
-export class AssistantModule { }
+export class AccessoriesModule { }

@@ -5,7 +5,7 @@ import { MatIcon } from '@angular/material/icon';
 import { MatToolbar } from '@angular/material/toolbar';
 import { MatDialog } from '@angular/material/dialog';
 
-import { SignInComponent } from 'src/app/assistant/sign-in/sign-in.component';
+import { SignInComponent } from 'src/app/accessories/sign-in/sign-in.component';
 
 import { GlobalsService } from './globals.service';
 
