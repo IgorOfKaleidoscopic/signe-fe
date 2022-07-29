@@ -1,39 +1,29 @@
 import { NgModule } from '@angular/core';
 
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
+import { FeaturesModule } from './features/features.module';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
-
-import { UsersModule } from './users/users.module'
-import { AccessoriesModule } from './accessories/accessories.module';
-
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AngularMaterialModule } from './angular-material/angular-material.module';
-
-import { GlobalsService } from './globals.service';
-import { GitHubGatewayService } from './git-hub-gateway.service';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AngularMaterialModule,
-    AppRoutingModule,
-    AccessoriesModule,
-    UsersModule
+    CoreModule,
+    SharedModule,
+    FeaturesModule,
+    AppRoutingModule
   ],
   exports: [
+    SharedModule
   ],
   providers: [
-    GlobalsService,
-    GitHubGatewayService
   ],
   bootstrap: [
-    AppComponent,
-    GlobalsService
+    AppComponent
   ]
 })
 export class AppModule { }
