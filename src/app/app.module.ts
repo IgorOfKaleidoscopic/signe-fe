@@ -13,11 +13,11 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    RouterModule, // directives for the html code
+    RouterModule,
     CoreModule,
     SharedModule,
     FeaturesModule,
-    AppRoutingModule // modularity, the whole content of AppRoutingModule could be in app.module.ts
+    AppRoutingModule
   ],
   exports: [
   ],
