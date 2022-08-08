@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { SplashComponent } from './features/splash/splash.component';
-import { PageNotFoundComponent } from './features/page-not-found/page-not-found.component';
+import { SplashComponent } from './feature/splash/splash.component';
+import { PageNotFoundComponent } from './feature/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'splash',
     component: SplashComponent
+  },
+  {
+    path: 'userlist',
+    loadChildren: () => import('./feature/userlist/userlist.module').then(m => m.UserlistModule)
   },
   {
     path: '**',

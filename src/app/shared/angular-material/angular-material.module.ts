@@ -47,11 +47,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 
-import { InfoComponent } from './info/info.component';
-
 @NgModule({
   declarations: [
-    InfoComponent
   ],
   imports: [
     CommonModule,
@@ -146,8 +143,7 @@ import { InfoComponent } from './info/info.component';
     MatTooltipModule,
     MatTreeModule,
     PortalModule,
-    ScrollingModule,
-    InfoComponent
+    ScrollingModule
   ]
 })
-export class SharedModule { }
+export class AngularMaterialModule { }

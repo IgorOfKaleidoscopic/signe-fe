@@ -1,9 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
-import { MatDialogRef } from '@angular/material/dialog';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-
-import { GlobalsService } from 'src/app/core/globals/globals.service';
+import { GlobalsService } from './../../core/globals/globals.service';
 
 export interface DialogData {
   pat: string;
