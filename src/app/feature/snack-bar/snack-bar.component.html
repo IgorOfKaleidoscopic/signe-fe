@@ -1,6 +1,14 @@
-<div>
-  <h1 mat-dialog-title>{{ data.title }}</h1>
-  <div mat-dialog-content>{{ data.content }}</div>
+<section>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Message</mat-label>
+      <input matInput #message>
+    </mat-form-field>
 
-</div>
+    <mat-form-field appearance="fill">
+      <mat-label>Action</mat-label>
+      <input matInput #action>
+    </mat-form-field>
+  </div>
+</section>
 

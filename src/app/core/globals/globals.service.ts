@@ -17,10 +17,10 @@ export class GlobalsService {
   }
 
   invalidatePAT(): void {
-    this.PAT = "";
+    this.setPAT("");
   }
 
-  isPATKnown(): boolean {
-    if (this.PAT=="") return false; else return true;
+  isPATValid(): boolean {
+    if (this.getPAT()=="") return false; else return true;
   }
 }

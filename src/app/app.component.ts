@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 
 import { MatIcon } from '@angular/material/icon';
 import { MatToolbar } from '@angular/material/toolbar';
-import { MatDialog } from '@angular/material/dialog';
 
 import { GlobalsService } from './core/globals/globals.service';
 
@@ -16,7 +15,7 @@ export class AppComponent {
   applicationName: string;
   loginAction: string;
 
-  constructor(private router: Router, public globals: GlobalsService, public dialog: MatDialog) {
+  constructor(private router: Router, private globals: GlobalsService) {
     this.applicationName = 'S I G N E';
     this.loginAction = 'LOG IN';
   }

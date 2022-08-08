@@ -1,5 +1,5 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { DIALOG_DATA } from '@angular/cdk/dialog';
+import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-info',
@@ -8,7 +8,11 @@ import { DIALOG_DATA } from '@angular/cdk/dialog';
 })
 export class SnackBarComponent implements OnInit {
 
-  constructor(@Inject(DIALOG_DATA) public data: {title: string, content: string}) { }
+  constructor(private snackBar: MatSnackBar) {}
+
+  openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action, {horizontalPosition: 'start', verticalPosition: 'bottom'});
+  }
 
   ngOnInit(): void {
   }

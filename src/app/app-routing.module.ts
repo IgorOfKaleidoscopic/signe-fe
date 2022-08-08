@@ -15,6 +15,10 @@ const routes: Routes = [
     component: SplashComponent
   },
   {
+    path: 'signin',
+    loadChildren: () => import('./feature/identity/identity.module').then(m => m.SignInModule)
+  },
+  {
     path: 'userlist',
     loadChildren: () => import('./feature/userlist/userlist.module').then(m => m.UserlistModule)
   },
