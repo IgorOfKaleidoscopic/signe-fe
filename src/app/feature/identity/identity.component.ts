@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { GlobalsService } from '../../core/globals/globals.service';
 import { SnackBarComponent } from '../snack-bar/snack-bar.component';
@@ -23,7 +23,7 @@ export class IdentityComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  signIn(): void {
+  setIdentity(): void {
     this.globals.setPAT(this.pat);
 
     this.snackbar.openSnackBar("You are signed in now", "OK");

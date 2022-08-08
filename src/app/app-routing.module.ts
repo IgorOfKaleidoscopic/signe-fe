@@ -16,7 +16,7 @@ const routes: Routes = [
   },
   {
     path: 'identity',
-    loadChildren: () => import('./feature/identity/identity.module').then(m => m.SignInModule)
+    loadChildren: () => import('./feature/identity/identity.module').then(m => m.IdentityModule)
   },
   {
     path: 'userlist',

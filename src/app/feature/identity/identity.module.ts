@@ -18,4 +18,4 @@ import { IdentityComponent } from './identity.component';
     SnackBarModule
   ]
 })
-export class SignInModule { }
+export class IdentityModule { }
