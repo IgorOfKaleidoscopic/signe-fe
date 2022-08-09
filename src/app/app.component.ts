@@ -13,10 +13,10 @@ import { GlobalsService } from './core/globals/globals.service';
 })
 export class AppComponent {
   applicationName: string;
-  loginAction: string;
 
   constructor(private router: Router, private globals: GlobalsService) {
     this.applicationName = 'S I G N E';
-    this.loginAction = 'LOG IN';
+
+    console.log("AppComponent constructor finished")
   }
 }

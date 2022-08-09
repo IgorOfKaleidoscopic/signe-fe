@@ -4,9 +4,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class GlobalsService {
-  PAT:string = "";
+  PAT:string;
 
-  constructor() {  }
+  constructor() {
+    this.PAT = "";
+  }
 
   setPAT(text: string) {
     this.PAT = text;
@@ -21,6 +23,6 @@ export class GlobalsService {
   }
 
   isPATValid(): boolean {
-    if (this.getPAT()=="") return false; else return true;
+    if (this.getPAT() == "") return false; else return true;
   }
 }

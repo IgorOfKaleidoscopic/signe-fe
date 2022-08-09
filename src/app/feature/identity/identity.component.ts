@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { GlobalsService } from '../../core/globals/globals.service';
-import { SnackBarComponent } from '../snack-bar/snack-bar.component';
 
 @Component({
   selector: 'app-identity',
@@ -14,7 +14,7 @@ export class IdentityComponent implements OnInit {
 
   constructor(
     private globals: GlobalsService,
-    private snackbar: SnackBarComponent
+    private snackBar: MatSnackBar
   ) {
     this.pat = this.globals.getPAT();
     this.hide = true;
@@ -23,15 +23,16 @@ export class IdentityComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  setIdentity(): void {
+  changeIdentity(): void {
     this.globals.setPAT(this.pat);
 
-    this.snackbar.openSnackBar("You are signed in now", "OK");
+    this.snackBar.open("Your identity just have changed to " + this.pat, "OK", {horizontalPosition: 'start', verticalPosition: 'bottom'});
   }
 
-  getAnonymous(): void {
+  becomeAnonymous(): void {
+    this.pat = "";
     this.globals.invalidatePAT();
 
-    this.snackbar.openSnackBar("You are anonymous now", "OK");
+    this.snackBar.open("You've just become anonymous", "OK", {horizontalPosition: 'start', verticalPosition: 'bottom'});
   }
 }

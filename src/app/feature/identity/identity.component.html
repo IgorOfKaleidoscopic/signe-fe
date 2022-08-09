@@ -1,22 +1,22 @@
-<section>
-  <div>
+<div class="identity">
+  <section>
     <p>
       Please provide a GitHub Personal Access Token
     </p>
 
-    <mat-form-field appearance="fill" class="form">
+    <mat-form-field appearance="fill" class="token">
       <mat-label>Token</mat-label>
+
       <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="pat" class="token">
-      <button mat-icon-button matSuffix [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" (click)="hide = !hide" [>
-        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+
+      <button mat-icon-button matSuffix [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" (click)="hide = !hide">
+        <mat-icon>{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
       </button>
     </mat-form-field>
-  </div>
-</section>
+  </section>
 
-<section>
-  <div>
-    <button mat-raised-button (click)="setIdentity()">Sign in</button>
-    <button mat-raised-button (click)="getAnonymous()">Get anonymous</button>
-  </div>
-</section>
+  <section>
+    <button mat-button (click)="changeIdentity()">Change identity</button>
+    <button mat-button (click)="becomeAnonymous()">Become anonymous</button>
+  </section>
+</div>
