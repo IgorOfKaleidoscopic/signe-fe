@@ -23,13 +23,13 @@ describe('AppComponent', () => {
   it(`should have as title 'signe-fe'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.applicationName).toEqual('signe-fe');
+    expect(app.applicationName).toEqual('S I G N E');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.span')?.textContent).toContain('SIGNE');
+    expect(compiled.querySelector('span')?.textContent).toContain('S I G N E');
   });
 });

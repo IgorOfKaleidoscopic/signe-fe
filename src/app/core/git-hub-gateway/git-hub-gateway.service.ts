@@ -11,6 +11,10 @@ export class GitHubGatewayService {
 
   constructor(private http: HttpClient, public globals: GlobalsService) {  }
 
+  getHub(): string {
+    return 'Hub';
+  }
+
   getRepositories() {
     console.log('token ' + this.globals.getPAT());
 

@@ -6,8 +6,14 @@ import { UserlistComponent } from './userlist.component';
 const routes: Routes = [
   {
     path: '',
-    component: UserlistComponent
-  }
+    component: UserlistComponent,
+    children: [
+      {
+        path: 'userid',
+        loadChildren: () => import('../user/user.module').then(m => m.UserModule)
+      }
+    ]
+  },
 ];
 
 @NgModule({

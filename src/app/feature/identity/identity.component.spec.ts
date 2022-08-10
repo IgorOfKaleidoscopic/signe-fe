@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { IdentityComponent } from './identity.component';
 
@@ -8,7 +9,8 @@ describe('IdentityComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IdentityComponent ]
+      declarations: [ IdentityComponent ],
+      imports: [ MatSnackBarModule ]
     })
     .compileComponents();
 
