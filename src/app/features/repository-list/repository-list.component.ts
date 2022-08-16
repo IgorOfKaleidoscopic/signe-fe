@@ -8,13 +8,13 @@ import { GitHubGatewayService } from 'src/app/core/git-hub-gateway/git-hub-gatew
   styleUrls: ['./repository-list.component.css']
 })
 export class RepositoryListComponent implements OnInit {
-  constructor(private ghg:GitHubGatewayService) { }
+  constructor(private githubgwy:GitHubGatewayService) { }
 
   ngOnInit(): void {
   }
 
   getFreeCodeCampRL() {
-    this.ghg.getRepositoryList().subscribe(response => console.log(response));
+    this.githubgwy.getRepositoryList().subscribe(response => console.log(response));
   }
 
 }

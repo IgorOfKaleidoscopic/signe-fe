@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { UserComponent } from './user.component';
-import { RepositoryListComponent } from '../repositorylist/repository-list/repository-list.component';
+import { RepositoryListComponent } from '../repository-list/repository-list.component';
 
 const routes: Routes = [
   {
