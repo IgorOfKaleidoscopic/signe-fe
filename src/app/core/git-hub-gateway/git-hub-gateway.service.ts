@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { Observable, throwError, map, catchError } from 'rxjs';
+import { RepositoryListModel } from "src/app/shared/models/repository-list-model"
 
 import { GlobalsService } from '../globals/globals.service';
 
@@ -11,19 +13,23 @@ export class GitHubGatewayService {
 
   constructor(private http: HttpClient, public globals: GlobalsService) {  }
 
-  getHub(): string {
-    return 'Hub';
+  getServiceName(): string {
+    return 'GitHubGatewayService';
   }
 
-  getRepositories() {
+  getRepositoryList(userName: string, pageNo: string, sortOn: string):Observable<> {
     console.log('token ' + this.globals.getPAT());
 
-    return this.http.get(
-      `${this.apiURL}/repositories`,
+    return this.http.get<RepositoryListModel>(
+      `${this.apiURL}/users/' + userName + '/repos'`,
       {
         headers: {
           'Accept':'application/vnd.github.v3+json',
           'Authorization':`token ${this.globals.getPAT()}`
+        },
+        params: {
+          'sort':sortOn,
+          'page':pageNo
         }
       }
       );
