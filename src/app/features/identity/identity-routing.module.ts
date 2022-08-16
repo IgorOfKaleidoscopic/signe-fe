@@ -3,7 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { IdentityComponent } from '../identity/identity.component';
 
-const routes: Routes = [{ path: '', component: IdentityComponent }];
+const routes: Routes = [
+  {
+    path: '',
+    component: IdentityComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
