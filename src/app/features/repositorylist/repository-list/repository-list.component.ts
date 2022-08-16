@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { RepositoryListModel } from 'src/app/model/repository-list-model';
+import { GitHubGatewayService } from 'src/app/core/git-hub-gateway/git-hub-gateway.service';
 
 @Component({
   selector: 'app-repository-list',
@@ -8,11 +8,13 @@ import { RepositoryListModel } from 'src/app/model/repository-list-model';
   styleUrls: ['./repository-list.component.css']
 })
 export class RepositoryListComponent implements OnInit {
-  repol: RepositoryListModel[];
-
-  constructor() { }
+  constructor(private ghg:GitHubGatewayService) { }
 
   ngOnInit(): void {
+  }
+
+  getFreeCodeCampRL() {
+    this.ghg.getRepositoryList().subscribe(response => console.log(response));
   }
 
 }

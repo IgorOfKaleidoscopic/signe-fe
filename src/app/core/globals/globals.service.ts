@@ -4,10 +4,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class GlobalsService {
-  PAT:string;
+  PAT: string;
+  GitHubApiBaseURL: string;
 
   constructor() {
-    this.PAT = "";
+    this.PAT = "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";
+    this.GitHubApiBaseURL = 'https://api.github.com';
   }
 
   setPAT(text: string) {
@@ -24,5 +26,9 @@ export class GlobalsService {
 
   isPATValid(): boolean {
     if (this.getPAT() == "") return false; else return true;
+  }
+
+  getGitHubApiBaseURL():string {
+    return this.GitHubApiBaseURL;
   }
 }
