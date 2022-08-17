@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { SplashComponent } from './features/splash/splash.component';
 import { PageNotFoundComponent } from './features/page-not-found/page-not-found.component';
+import { UtilitiesComponent } from './features/utilities/utilities.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,11 @@ const routes: Routes = [
   {
     path: 'userlist',
     loadChildren: () => import('./features/userlist/userlist.module').then(m => m.UserlistModule)
+  },
+  {
+    path: 'util',
+    component: UtilitiesComponent
+
   },
   {
     path: '**',

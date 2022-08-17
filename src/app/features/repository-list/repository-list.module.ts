@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 
+import { RepositoryListComponent } from './repository-list.component';
+
 @NgModule({
-  declarations: [],
+  declarations: [
+    RepositoryListComponent
+  ],
   imports: [
   ]
 })

@@ -10,6 +10,11 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
   declarations: [
   ],
   imports: [
+    MatToolbarModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSnackBarModule
   ],
   exports: [
     MatToolbarModule,
