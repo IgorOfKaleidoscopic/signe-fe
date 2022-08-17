@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { PageNotFoundComponent } from './page-not-found.component';
 
@@ -7,6 +8,7 @@ import { PageNotFoundComponent } from './page-not-found.component';
     PageNotFoundComponent
   ],
   imports: [
+    CommonModule
   ]
 })
 export class PageNotFoundModule { }

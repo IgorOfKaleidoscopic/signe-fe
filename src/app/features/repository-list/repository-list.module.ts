@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { RepositoryListComponent } from './repository-list.component';
 
@@ -7,6 +8,7 @@ import { RepositoryListComponent } from './repository-list.component';
     RepositoryListComponent
   ],
   imports: [
+    CommonModule
   ]
 })
 export class RepositoryListModule { }

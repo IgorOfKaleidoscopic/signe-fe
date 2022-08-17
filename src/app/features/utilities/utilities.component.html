@@ -1,12 +1,12 @@
-<p>utilities works!</p>
-<section>
-  <mat-form-field appearance="fill">
-    <mat-label>Edit a string</mat-label>
+<div>
+  <section>
+    <mat-form-field appearance="fill">
+      <mat-label>Edit a string</mat-label>
+      <input matInput type="text" [ngModel]="encodeRequest" (change)="encode()">
+    </mat-form-field>
+  </section>
 
-    <input matInput [type]="'text'" [ngModel]="encodeRequest" (change)="encode()">
-
+  <section>
     <p>Encoded string: {{encodeResponse}}</p>
-
-  </mat-form-field>
-
-</section>
+  </section>
+</div>
