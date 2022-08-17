@@ -5,10 +5,9 @@ import { Buffer } from 'buffer';
   providedIn: 'root'
 })
 export class UtilitiesService {
-
   constructor() { }
 
-  encode( value:string ):string {
-    return Buffer.from(value, 'base64').toString();
+  encode(value:string):Buffer {
+    return Buffer.from(value, 'utf8');
   }
 }

@@ -16,8 +16,12 @@ export class UtilitiesComponent implements OnInit {
     this.encodeResponse = '';
   }
 
-  encode() {
-    this.encodeResponse = this.utilities.encode(this.encodeRequest);
+  encode(): void {
+    console.log(this.encodeRequest);
+
+    this.encodeResponse = new Uint32Array(this.utilities.encode(this.encodeRequest)).toString();
+
+    console.log(this.encodeResponse);
   }
 
   ngOnInit(): void {
