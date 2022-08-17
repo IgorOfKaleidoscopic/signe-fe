@@ -1,5 +1,6 @@
 <div>
   <section>
+    <p>Request for conversion</p>
     <mat-form-field appearance="fill">
       <mat-label>Edit a string</mat-label>
       <input matInput type="text" [(ngModel)]="encodeRequest" (ngModelChange)="encode()">
@@ -7,6 +8,6 @@
   </section>
 
   <section>
-    <p>Encoded string: {{encodeResponse}}</p>
+    <p>Response: {{encodeResponse}}</p>
   </section>
 </div>
