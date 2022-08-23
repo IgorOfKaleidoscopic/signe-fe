@@ -9,28 +9,28 @@ import { GitHubGatewayService } from '../../core/git-hub-gateway/git-hub-gateway
   styleUrls: ['./identity.component.css']
 })
 export class IdentityComponent implements OnInit {
-  pat: string;
+  sToken: string;
   hide: boolean;
 
   constructor(
     private githubgwy: GitHubGatewayService,
     private snackBar: MatSnackBar
   ) {
-    this.pat = this.githubgwy.getPAT();
+    this.sToken = this.githubgwy.getIdentity();
     this.hide = true;
   }
 
   ngOnInit(): void {  }
 
   changeIdentity(): void {
-    this.githubgwy.setPAT(this.pat);
+    this.githubgwy.setIdentity(this.sToken);
 
-    this.snackBar.open("Your identity just have changed to " + this.pat, "OK", {horizontalPosition: 'start', verticalPosition: 'bottom'});
+    this.snackBar.open("Your identity just has changed to " + this.sToken, "OK", {horizontalPosition: 'start', verticalPosition: 'bottom'});
   }
 
   becomeAnonymous(): void {
-    this.pat = "";
-    this.githubgwy.invalidatePAT();
+    this.sToken = '';
+    this.githubgwy.setIdentityToAnonymous();
 
     this.snackBar.open("You've just become anonymous", "OK", {horizontalPosition: 'start', verticalPosition: 'bottom'});
   }

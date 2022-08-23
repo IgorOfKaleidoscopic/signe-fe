@@ -11,17 +11,16 @@ export class UtilitiesComponent implements OnInit {
   encodeRequest:string;
   encodeResponse:string;
 
-  constructor(public utilities: UtilitiesService) {
+  constructor(public utlt: UtilitiesService) {
     this.encodeRequest = '';
     this.encodeResponse = '';
   }
 
   encode(): void {
-    console.log(this.encodeRequest);
-
-    this.encodeResponse = new Uint32Array(this.utilities.encode(this.encodeRequest)).toString();
-
-    console.log(this.encodeResponse);
+    //this.encodeResponse = new Uint8Array(this.utlt.encode(this.encodeRequest)).toString();
+    //console.log(this.encodeRequest);
+    //console.log(new Uint32Array(this.utlt.encode(this.encodeRequest)).toString());
+    //console.log(this.encodeResponse);
   }
 
   ngOnInit(): void {

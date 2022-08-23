@@ -5,9 +5,15 @@ import { Buffer } from 'buffer';
   providedIn: 'root'
 })
 export class UtilitiesService {
-  constructor() { }
 
-  encode(value:string):Buffer {
-    return Buffer.from(value, 'utf8');
+  constructor() {}
+
+  //encodeUint8(value:string):Uint8Array {
+  //  return new Uint8Array.from('');
+  //}
+
+  decode(value:Buffer):string {
+    return value.toString('utf8');
   }
+
 }
