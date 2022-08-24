@@ -8,19 +8,18 @@ import { UtilitiesService } from 'src/app/core/utilities/utilities.service';
   styleUrls: ['./utilities.component.css']
 })
 export class UtilitiesComponent implements OnInit {
-  encodeRequest:string;
-  encodeResponse:string;
+  sPerc:string = '';
+  sDbfs:string = '';
 
   constructor(public utlt: UtilitiesService) {
-    this.encodeRequest = '';
-    this.encodeResponse = '';
   }
 
-  encode(): void {
-    //this.encodeResponse = new Uint8Array(this.utlt.encode(this.encodeRequest)).toString();
-    //console.log(this.encodeRequest);
-    //console.log(new Uint32Array(this.utlt.encode(this.encodeRequest)).toString());
-    //console.log(this.encodeResponse);
+  convertPercDbfs():void {
+    this.sDbfs = String(Number(20 * Math.log10(Number(this.sPerc))).toFixed(2));
+  }
+
+  clearLocalStorage():void {
+    this.utlt.clearLocalStorage();
   }
 
   ngOnInit(): void {

@@ -34,7 +34,7 @@ export class UtilitiesService {
 
       return sText;
     } else {
-      console.log('UtilitiesService.decodeTextFromLocalStorage: No such text found in localStorage')
+      console.log('UtilitiesService.decodeTextFromLocalStorage: No such text found in localStorage');
 
       return '';
     }
@@ -49,6 +49,10 @@ export class UtilitiesService {
       localStorage.removeItem(prefix + i.toString().padStart(3, '0'));
     }
 
-    console.log('UtilitiesService.removeEncodedTextFromLocalStorage: Text by prefix "' + prefix + '" has been removed from the localStorage')
+    console.log('UtilitiesService.removeEncodedTextFromLocalStorage: Text by prefix "' + prefix + '" has been removed from the localStorage');
+  }
+
+  clearLocalStorage():void {
+    localStorage.clear();
   }
 }

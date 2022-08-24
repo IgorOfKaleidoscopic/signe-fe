@@ -1,13 +1,15 @@
 <div>
   <section>
-    <p>Request for conversion</p>
-    <mat-form-field appearance="fill">
-      <mat-label>Edit a string</mat-label>
-      <input matInput type="text" [(ngModel)]="encodeRequest" (ngModelChange)="encode()">
-    </mat-form-field>
+    <h3>Browser's local storage</h3>
+    <button mat-button (click)="clearLocalStorage()">Clear localStorage</button>
   </section>
-
+  <br>
   <section>
-    <p>Response: {{encodeResponse}}</p>
+    <h3>Exercise: Convert a percentage of the maximum level in digital system to dBFS</h3>
+    <mat-form-field appearance="fill">
+      <mat-label>Edit a number between 0 and 1</mat-label>
+      <input matInput type="text" [(ngModel)]="sPerc" (ngModelChange)="convertPercDbfs()">
+    </mat-form-field>
+    Response: {{sDbfs}} dBFS
   </section>
 </div>
