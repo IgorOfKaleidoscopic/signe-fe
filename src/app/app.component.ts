@@ -15,6 +15,6 @@ export class AppComponent {
   constructor(private router: Router, private githubgwy: GitHubGatewayService) {
     this.applicationName = 'S I G N E';
 
-    console.log("AppComponent constructor finished")
+    console.log("AppComponent.constructor: Finished")
   }
 }

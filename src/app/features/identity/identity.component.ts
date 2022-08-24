@@ -25,13 +25,13 @@ export class IdentityComponent implements OnInit {
   changeIdentity(): void {
     this.githubgwy.setIdentity(this.sToken);
 
-    this.snackBar.open("Your identity just has changed to " + this.sToken, "OK", {horizontalPosition: 'start', verticalPosition: 'bottom'});
+    this.snackBar.open('Your identity is now marked by token "' + this.sToken + '"', 'OK', {horizontalPosition: 'start', verticalPosition: 'bottom'});
   }
 
   becomeAnonymous(): void {
     this.sToken = '';
     this.githubgwy.setIdentityToAnonymous();
 
-    this.snackBar.open("You've just become anonymous", "OK", {horizontalPosition: 'start', verticalPosition: 'bottom'});
+    this.snackBar.open('You are anonymous now', 'OK', {horizontalPosition: 'start', verticalPosition: 'bottom'});
   }
 }
