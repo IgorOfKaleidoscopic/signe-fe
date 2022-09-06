@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { UserComponent } from './user.component';
-import { RepositoryListComponent } from '../repository-list/repository-list.component';
 
 const routes: Routes = [
   {
@@ -11,7 +10,7 @@ const routes: Routes = [
     children: [
       {
         path: 'repos',
-        component: RepositoryListComponent
+        loadChildren: () => import('../repository-list/repository-list.module').then(m => m.RepositoryListModule)
       }
     ]
   }

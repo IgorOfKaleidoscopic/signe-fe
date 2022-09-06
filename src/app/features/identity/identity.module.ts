@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { AngularMaterialModule } from 'src/app/shared/modules/angular-material.module';
-
 import { IdentityRoutingModule } from './identity-routing.module';
 
 import { IdentityComponent } from './identity.component';

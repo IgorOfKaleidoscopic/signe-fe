@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { Observable, map, throwError, catchError } from 'rxjs';
+import { Observable, pipe, map, filter, throwError, catchError } from 'rxjs';
 
 import { RepositoryListModel } from 'src/app/shared/models/repository-list-model';
 import { UtilitiesService } from 'src/app/core/utilities/utilities.service';
@@ -61,7 +61,7 @@ export class GitHubGatewayService {
 
         }
       }
-      );
+      ).pipe();
  }
 
 }

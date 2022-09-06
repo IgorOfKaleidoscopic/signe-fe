@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { RepositoryListRoutingModule } from './repository-list-routing.module';
+
 import { RepositoryListComponent } from './repository-list.component';
 
 @NgModule({
@@ -8,7 +10,8 @@ import { RepositoryListComponent } from './repository-list.component';
     RepositoryListComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RepositoryListRoutingModule
   ]
 })
 export class RepositoryListModule { }

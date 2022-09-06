@@ -1,5 +1,27 @@
 <div>
   <p>Repositories page!</p>
-  <button mat-button (click)="getFreeCodeCampRL()">SHOW FREECODECAMP REPOSITORY LIST</button>
+  <button mat-button (click)="getFreeCodeCampRL()">SHOW FREECODECAMP's REPOSITORY LIST</button>
 </div>
 
+<div *ngIf="loading">
+  loading...
+</div>
+
+<div *ngIf="errorMsg">
+  <strong>Warning!</strong> {{errorMsg}}
+</div>
+
+<div>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let repo of repos">
+        <td>{{repo.name}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
