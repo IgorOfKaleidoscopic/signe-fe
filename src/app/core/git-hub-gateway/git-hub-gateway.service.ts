@@ -49,9 +49,9 @@ export class GitHubGatewayService {
     return this.baseUrlGitHubApi;
   }
 
-  getRepositoryList():Observable<RepositoryListModel[]> {
+  getRepositoryList(userName: string):Observable<RepositoryListModel[]> {
     return this.httpc.get<RepositoryListModel[]>(
-      `${this.getBaseUrlGitHubApi()}/users/freeCodeCamp/repos`,
+      `${this.getBaseUrlGitHubApi()}/users/${userName}/repos`,
       {
         headers: {
           'Accept':'application/vnd.github.v3+json',

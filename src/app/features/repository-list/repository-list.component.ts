@@ -20,10 +20,10 @@ export class RepositoryListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getFreeCodeCampRL() {
+  getUserRL(userName: string) {
     this.loading = true;
 
-    this.subscr$ = this.githubgwy.getRepositoryList().subscribe({
+    this.subscr$ = this.githubgwy.getRepositoryList(userName).subscribe({
       next: (data) => {
         console.info("RepositoryList stream chunk");
         console.log(data);

@@ -6,7 +6,12 @@
   </section>
 
   <section>
-    <p><a routerLink="repos">SHOW REPOSITORIES PAGE</a></p>
+    <mat-form-field appearance="fill" class="token">
+      <mat-label>User name</mat-label>
+      <input matInput type="text" [(ngModel)]="userName">
+    </mat-form-field>
+
+    <p><a [routerLink]="repos">SHOW REPOSITORIES PAGE</a></p>
   </section>
 
   <router-outlet></router-outlet>
